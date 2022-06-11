@@ -35,29 +35,29 @@
                     </li>
                 </ul>
                 <div class="navbar__wrapper">
-                    <input type="checkbox" />
                     <span class="top"></span>
                     <span class="center"></span>
                     <span class="bottom"></span>
-                    <ul class="navbar__menu">
-                        <li class="navbar__listitem">
-                            <a class="navbar__link" href="#">Home</a>
-                        </li>
-                        <li class="navbar__listitem">
-                            <a class="navbar__link" href="#">Product</a>
-                        </li>
-                        <li class="navbar__listitem">
-                            <a class="navbar__link" href="#">Portfolio</a>
-                        </li>
-                        <li class="navbar__listitem">
-                            <a class="navbar__link" href="#">Contact</a>
-                        </li>
-                        <li class="navbar__listitem">
-                            <a class="navbar__link" href="#">About</a>
-                        </li>
-                    </ul>
                 </div>
             </nav>
+            <input class="navbar__toggle" type="checkbox" />
+            <ul class="navbar__menu">
+                <li class="navbar__listitem">
+                    <a class="navbar__link" href="#">Home</a>
+                </li>
+                <li class="navbar__listitem">
+                    <a class="navbar__link" href="#">Product</a>
+                </li>
+                <li class="navbar__listitem">
+                    <a class="navbar__link" href="#">Portfolio</a>
+                </li>
+                <li class="navbar__listitem">
+                    <a class="navbar__link" href="#">Contact</a>
+                </li>
+                <li class="navbar__listitem">
+                    <a class="navbar__link" href="#">About</a>
+                </li>
+            </ul>
         </header>
         <main class="hero">
             <img
@@ -65,6 +65,12 @@
                 alt="desk with computer and pencils"
                 class="hero__img"
             />
+            <h1 class="hero__title">
+                Dream <span>Design</span> <span>Develop</span>
+            </h1>
+            <form class="cta" action="./contact.html">
+                <input type="submit" class="cta__btn" value="Hire me!" />
+            </form>
         </main>
     </body>
 </html>
