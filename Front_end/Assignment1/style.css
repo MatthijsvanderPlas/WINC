@@ -1,9 +1,11 @@
 * {
     padding: 0;
     margin: 0;
-    --primary-color: #2b2d42;
-    --secondary-color: #8d99ae;
-    --off-coloer: #edf2f4;
+    --primary-color: rgb(43, 45, 66);
+    --secondary-color: rgb(141, 153, 174);
+    --off-color: rgb(237, 242, 244);
+    --menu-color: rgba(237, 242, 244, 0.5);
+    font-family: "Roboto", sans-serif;
 }
 
 body {
@@ -28,25 +30,102 @@ body {
     height: 100%;
     margin: 0 auto;
     justify-content: space-between;
-    align-content: baseline;
+    align-content: center;
 }
 
 .navbar__logo {
-    width: 50%;
-    padding: 1rem;
+    width: 33%;
+    padding-left: 0.5rem;
 }
 
 .navbar__list {
-    width: 100%;
+    display: none;
+    width: auto;
 }
 
 .navbar__listitem {
+    list-style-type: none;
+    padding: 0.5rem;
+}
+
+.navbar__menu {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 37.5px;
+    left: -98px;
+    background-color: var(--menu-color);
+    border-radius: 0.5rem 0rem 0rem 0.5rem;
+    width: 150px;
+    height: fit-content;
+    align-items: flex-end;
+    visibility: hidden;
+}
+
+.navbar__link {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-size: 1rem;
+    z-index: 3;
+}
+
+.navbar__link:hover {
+    color: var(--secondary-color);
+}
+
+.navbar__wrapper {
+    cursor: pointer;
+    border: none;
+    background-color: var(--secondary-color);
+    align-self: center;
+    margin-right: 1rem;
+    position: relative;
+    width: 35px;
+    height: 25px;
+}
+
+.navbar__wrapper > span {
+    display: block;
+    background-color: var(--primary-color);
+    height: 3px;
+    width: 35px;
+    margin: 0 auto;
+    margin-bottom: 5px;
+    border-radius: 2rem;
+}
+
+.navbar__wrapper > input {
+    display: block;
+    width: 50px;
+    height: 35px;
+    z-index: 2s;
+    position: absolute;
+    top: -7px;
+    left: -7px;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.navbar__wrapper > input:checked ~ .navbar__menu {
+    visibility: visible;
+}
+
+.navbar__wrapper > input:checked ~ .top {
+    position: absolute;
+    top: 9px;
+    transform: rotate(-45deg);
+}
+
+.navbar__wrapper > input:checked ~ .center {
     display: none;
 }
 
-.navbar__hamburger {
-    content: "";
-    background-color: var(--primary-color);
-    height: 5px;
-    width: 20px;
+.navbar__wrapper > input:checked ~ .bottom {
+    position: absolute;
+    top: 9px;
+    transform: rotate(45deg);
+}
+
+.hero__img {
+    width: 100%;
 }

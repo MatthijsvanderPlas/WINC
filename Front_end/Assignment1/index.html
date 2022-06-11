@@ -5,6 +5,12 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
         <title>StarDASH Development</title>
     </head>
     <body>
@@ -12,16 +18,53 @@
             <nav class="navbar">
                 <img class="navbar__logo" src="./logo.svg" alt="Company logo" />
                 <ul class="navbar__list">
-                    <li class="navbar__listitem"><a href="#">Home</a></li>
-                    <li class="navbar__listitem"><a href="#">Product</a></li>
-                    <li class="navbar__listitem"><a href="#">Portfolio</a></li>
-                    <li class="navbar__listitem"><a href="#">Contact</a></li>
-                    <li class="navbar__listitem"><a href="#">About</a></li>
+                    <li class="navbar__listitem">
+                        <a class="navbar__link" href="#">Home</a>
+                    </li>
+                    <li class="navbar__listitem">
+                        <a class="navbar__link" href="#">Product</a>
+                    </li>
+                    <li class="navbar__listitem">
+                        <a class="navbar__link" href="#">Portfolio</a>
+                    </li>
+                    <li class="navbar__listitem">
+                        <a class="navbar__link" href="#">Contact</a>
+                    </li>
+                    <li class="navbar__listitem">
+                        <a class="navbar__link" href="#">About</a>
+                    </li>
                 </ul>
-                <a href="#"
-                    ><hamburger class="navbar__hamburger"></hamburger
-                ></a>
+                <div class="navbar__wrapper">
+                    <input type="checkbox" />
+                    <span class="top"></span>
+                    <span class="center"></span>
+                    <span class="bottom"></span>
+                    <ul class="navbar__menu">
+                        <li class="navbar__listitem">
+                            <a class="navbar__link" href="#">Home</a>
+                        </li>
+                        <li class="navbar__listitem">
+                            <a class="navbar__link" href="#">Product</a>
+                        </li>
+                        <li class="navbar__listitem">
+                            <a class="navbar__link" href="#">Portfolio</a>
+                        </li>
+                        <li class="navbar__listitem">
+                            <a class="navbar__link" href="#">Contact</a>
+                        </li>
+                        <li class="navbar__listitem">
+                            <a class="navbar__link" href="#">About</a>
+                        </li>
+                    </ul>
+                </div>
             </nav>
         </header>
+        <main class="hero">
+            <img
+                src="./hero.jpg"
+                alt="desk with computer and pencils"
+                class="hero__img"
+            />
+        </main>
     </body>
 </html>
