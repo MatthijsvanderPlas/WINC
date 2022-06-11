@@ -199,6 +199,7 @@ body {
 
 .article {
     grid-area: main;
+    margin-top: 2rem;
     padding: 0 1rem;
 }
 
@@ -206,9 +207,11 @@ body {
     .hero__title {
         font-size: 4rem;
     }
+}
 
+@media (min-width: 700px) {
     .article {
-        margin-top: 4rem;
+        margin-top: 3rem;
     }
 }
 
