@@ -12,7 +12,7 @@
 body {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 50px minmax(auto, 75vh) 150px;
+    grid-template-rows: 50px 1fr 150px;
     grid-template-areas:
         "header"
         "main"
@@ -46,7 +46,7 @@ body {
 
 .navbar__listitem {
     list-style-type: none;
-    padding: 0.5rem;
+    padding: 1rem;
 }
 
 .navbar__menu {
@@ -56,17 +56,43 @@ body {
     flex-direction: column;
     background-color: var(--menu-color);
     width: 100%;
-    height: fit-content;
+    height: auto;
+    min-height: 250px;
     align-items: center;
     visibility: hidden;
     transform: translateX(-100vw);
 }
 
 .navbar__link {
+    position: relative;
     text-decoration: none;
     color: var(--primary-color);
-    font-size: 2rem;
+    font-size: 1.75rem;
+    margin-right: 1rem;
     z-index: 3;
+}
+
+.navbar__link::after {
+    content: "";
+    position: absolute;
+    background-color: var(--off-color);
+    width: 100%;
+    height: 3px;
+    top: 2rem;
+    left: 0;
+    transform: scale(0);
+}
+
+.navbar__link:hover::after {
+    content: "";
+    position: absolute;
+    background-color: var(--off-color);
+    width: 100%;
+    height: 3px;
+    top: 2rem;
+    left: 0;
+    transform: scale(1);
+    transition: all 300ms ease-in-out;
 }
 
 .navbar__link:hover {
@@ -112,7 +138,7 @@ body {
     transition: all 400ms ease;
 }
 
-.navbar__toggle:checked ~ body > span {
+.navbar__toggle:checked ~ :root > .top {
     transform: rotate(45);
 }
 
@@ -126,6 +152,7 @@ body {
     grid-area: main;
     margin: 0 auto;
     width: 100%;
+    min-height: 250px;
     max-width: 865px;
 }
 
@@ -133,6 +160,7 @@ body {
     position: absolute;
     z-index: -1;
     width: 100%;
+    min-height: 250px;
     max-width: 865px;
     max-height: 500px;
 }
@@ -199,8 +227,82 @@ body {
 
 .article {
     grid-area: main;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
     margin-top: 2rem;
     padding: 0 1rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid var(--primary-color);
+    border-radius: 1rem;
+    width: 35ch;
+    padding: 0.75rem;
+    margin: 10px auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.card__row {
+    display: flex;
+    align-items: center;
+}
+
+.card__aside {
+    width: 28ch;
+}
+
+.card__text {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    padding: 1rem;
+}
+
+.card__img {
+    width: 75px;
+    padding: 0.5rem;
+}
+
+.card__list {
+    margin-left: 1.5rem;
+}
+
+.card__list-item {
+    font-size: 1.25rem;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.footer__menu {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.adress__list {
+    list-style-type: none;
+    margin: 0;
+    padding: 2rem;
+}
+
+.footer__list {
+    list-style-type: none;
+    margin: 0;
+    padding: 2rem;
 }
 
 @media (min-width: 600px) {
@@ -210,15 +312,49 @@ body {
 }
 
 @media (min-width: 700px) {
+    body {
+        grid-template-columns: 1fr;
+        grid-template-rows: 75px 1fr 150px;
+        grid-template-areas:
+            "header"
+            "main"
+            "footer";
+    }
+
+    .navbar__menu,
+    .navbar__wrapper,
+    .navbar__toggle {
+        display: none;
+    }
+
+    .navbar__list {
+        display: flex;
+        align-items: center;
+    }
+
+    .navbar__listitem {
+        padding: 0;
+    }
+
+    .navbar__link:hover {
+        color: var(--off-color);
+    }
+
     .article {
         margin-top: 3rem;
+    }
+}
+
+@media (min-width: 900px) {
+    .navbar__listitem {
+        margin-right: 1rem;
     }
 }
 
 @media (min-width: 1200px) {
     body {
         grid-template-columns: 1fr 1200px 1fr;
-        grid-template-rows: 50px minmax(auto, 100vh) 150px;
+        grid-template-rows: 75px 1fr 150px;
         grid-template-areas:
             "header header header"
             ". main ."
