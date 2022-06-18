@@ -37,6 +37,11 @@ body {
 .navbar__logo {
     width: 33%;
     padding: 0.25rem 0.5rem;
+    align-self: center;
+}
+
+.navbar__img {
+    width: 100%;
 }
 
 .navbar__list {
@@ -314,6 +319,7 @@ form > * {
     font-size: 2rem;
 }
 .contact__text {
+    margin-top: 1rem;
     font-size: 1.5rem;
 }
 
@@ -398,6 +404,18 @@ form > * {
 
     .contact {
         flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .contact__sidenote {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .contact__text {
+        width: 75%;
     }
 }
 
