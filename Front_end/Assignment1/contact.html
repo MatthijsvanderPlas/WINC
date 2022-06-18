@@ -59,7 +59,53 @@
                 </li>
             </ul>
         </header>
-        <main class="main"></main>
+        <main class="main">
+            <div class="contact">
+                <form
+                    class="form"
+                    action="mailto:info@stardash.nl"
+                    method="post"
+                    autocomplete="on"
+                >
+                    <label for="name" class="contact__label">Naam:</label>
+                    <input
+                        type="text"
+                        name="name"
+                        class="contact__input"
+                        required
+                    />
+                    <label for="subject" class="contact__label"
+                        >Onderwerp:</label
+                    >
+                    <select name="subject" class="contact__input" required>
+                        <option value="Offerte">Offerte</option>
+                        <option value="Vraag">Vraag</option>
+                        <option value="Bug report">Bug report</option>
+                    </select>
+                    <label for="remarks" class="contact__label"
+                        >Opmerking:</label
+                    >
+                    <textarea
+                        type="textarea"
+                        name="message"
+                        class="contact__textarea"
+                        required
+                    ></textarea>
+                    <input
+                        class="contact__submit"
+                        type="submit"
+                        value="Mail je vraag"
+                    />
+                </form>
+                <div class="contact__sidenote">
+                    <h2 class="contact__header">Vragen?</h2>
+                    <p class="contact__text">
+                        Voor vragen en opemerkingen stuur gerust een bericht en
+                        we zullen zo snel mogelijk antwoorden.
+                    </p>
+                </div>
+            </div>
+        </main>
         <footer class="footer">
             <div class="footer__menu">
                 <ul class="adress__list">

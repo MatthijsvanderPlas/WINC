@@ -276,6 +276,58 @@ body {
     font-size: 1.25rem;
 }
 
+.contact {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 95%;
+    padding: 0.5rem;
+}
+.form {
+    flex: 1 1 100%;
+}
+
+form > * {
+    font-size: 1.5rem;
+    display: block;
+    margin: 0.5rem;
+}
+
+.contact__input {
+    width: 300px;
+}
+
+.contact__textarea {
+    resize: none;
+    width: 94%;
+    min-width: 200px;
+    max-width: 100%;
+    min-height: 200px;
+    max-height: 400px;
+}
+
+.contact__sidenote {
+    flex: 1 1 100%;
+    margin: 1rem 0;
+}
+
+.contact__header {
+    font-size: 2rem;
+}
+.contact__text {
+    font-size: 1.5rem;
+}
+
+.contact__submit {
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    width: 95%;
+    background-color: rgb(106, 160, 255);
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
 .footer {
     grid-area: footer;
     background-color: var(--secondary-color);
@@ -342,6 +394,10 @@ body {
 
     .article {
         margin-top: 3rem;
+    }
+
+    .contact {
+        flex-direction: row;
     }
 }
 
