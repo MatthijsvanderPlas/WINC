@@ -19,6 +19,15 @@ body {
         "footer";
 }
 
+img {
+    width: 100%;
+    height: 100%;
+}
+
+section {
+    overflow: auto;
+}
+
 .header {
     grid-area: header;
     background-color: var(--secondary-color);
@@ -153,6 +162,11 @@ body {
     max-width: 1200px;
 }
 
+section:nth-child(even) {
+    background-color: var(--off-color);
+    overflow-x: 100%;
+}
+
 .hero {
     grid-area: main;
     margin: 0 auto;
@@ -165,6 +179,7 @@ body {
     position: absolute;
     z-index: -1;
     width: 100%;
+    height: auto;
     min-height: 250px;
     max-width: 865px;
     max-height: 500px;
@@ -281,6 +296,34 @@ body {
     font-size: 1.25rem;
 }
 
+.pcard {
+    display: flex;
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    margin: 4rem auto;
+}
+
+.pcard__border {
+    border: 2px solid black;
+    border-radius: 1rem;
+    margin-top: 10rem;
+}
+
+.pcard__img {
+    max-width: 400px;
+    flex: 1 1 100%;
+}
+
+.pcard__heading {
+    font-size: 2rem;
+}
+
+.pcard__text {
+    padding: 2rem;
+    flex: 1 1 100%;
+}
+
 .contact {
     display: flex;
     flex-direction: column-reverse;
@@ -332,6 +375,20 @@ form > * {
     background-color: rgb(106, 160, 255);
     border: 1px solid black;
     border-radius: 5px;
+}
+
+.about__img {
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    border: 2px solid black;
+    border-radius: 50%;
+    width: 200px;
+    height: auto;
+}
+
+.pcard > p {
+    height: 300px;
 }
 
 .footer {
