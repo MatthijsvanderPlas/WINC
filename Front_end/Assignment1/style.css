@@ -24,10 +24,6 @@ img {
     height: 100%;
 }
 
-section {
-    overflow: auto;
-}
-
 .header {
     grid-area: header;
     background-color: var(--secondary-color);
@@ -75,6 +71,7 @@ section {
     align-items: center;
     visibility: hidden;
     transform: translateX(-100vw);
+    z-index: 5;
 }
 
 .navbar__link {
@@ -298,14 +295,17 @@ section:nth-child(even) {
 
 .pcard {
     display: flex;
+    flex-direction: column;
     position: relative;
-    width: 100%;
-    max-width: 1000px;
+    width: 90%;
+    max-width: 800px;
     margin: 4rem auto;
+    justify-content: center;
+    align-items: center;
 }
 
 .pcard__border {
-    border: 2px solid black;
+    border: 1px solid black;
     border-radius: 1rem;
     margin-top: 10rem;
 }
@@ -317,11 +317,43 @@ section:nth-child(even) {
 
 .pcard__heading {
     font-size: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 .pcard__text {
     padding: 2rem;
     flex: 1 1 100%;
+    line-height: 1.6;
+}
+
+.pcard__p {
+    max-width: 45ch;
+}
+
+.pcard__bio {
+    position: relative;
+    text-decoration: none;
+    list-style-type: none;
+    top: 100px;
+    width: 90%;
+    max-width: 500px;
+    height: 320px;
+    padding: 2rem;
+    font-size: 1.5rem;
+}
+
+.pcard__bio > li:nth-child(3) {
+    margin-top: 1rem;
+}
+
+.about__img {
+    position: absolute;
+    top: -110px;
+    left: calc(50vw - 100px - 5%);
+    border: 1px solid black;
+    border-radius: 50%;
+    width: 200px;
+    height: auto;
 }
 
 .contact {
@@ -377,20 +409,6 @@ form > * {
     border-radius: 5px;
 }
 
-.about__img {
-    position: absolute;
-    top: -50px;
-    left: -50px;
-    border: 2px solid black;
-    border-radius: 50%;
-    width: 200px;
-    height: auto;
-}
-
-.pcard > p {
-    height: 300px;
-}
-
 .footer {
     grid-area: footer;
     background-color: var(--secondary-color);
@@ -418,6 +436,14 @@ form > * {
     list-style-type: none;
     margin: 0;
     padding: 2rem;
+}
+
+.video {
+    width: 95vw;
+    height: 50vw;
+    max-height: 800px;
+    margin: 0 auto;
+    margin-bottom: 2rem;
 }
 
 @media (min-width: 600px) {
@@ -473,6 +499,21 @@ form > * {
 
     .contact__text {
         width: 75%;
+    }
+
+    .about__img {
+        left: -50px;
+    }
+
+    .pcard {
+        flex-direction: row;
+    }
+
+    .margin__left {
+        margin-left: 4rem;
+    }
+    .margin__right {
+        margin-right: 4rem;
     }
 }
 
