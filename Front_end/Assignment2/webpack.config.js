@@ -5,20 +5,18 @@ module.exports = {
     entry: './src/index.js',
     output: {
         filename: 'main.js',
-        path: path.resolve(__dirname, 'dist')
+        path: path.resolve(__dirname, 'dist'),
+        assetModuleFilename: 'assets/images/[name][ext]'
+    },
+
+    devtool: 'eval-source-map',
+    devServer: {
+        static: './dist',
     },
 
     module: {
 
         rules: [
-            {
-                test: /\.css$/,
-                use: [
-                    'style-loader',
-                    'css-loader'
-                ]
-            },
-
             {
                 test: /\.s[ac]ss$/,
                 use: [
@@ -26,7 +24,22 @@ module.exports = {
                     'css-loader',
                     'sass-loader'
                 ]
-            }
+            },
+
+            {
+                test: /\.(gif|png|jpe?g)$/,
+                type: "asset/resource",
+            },
+            
+
+            {
+                test:/\.html$/,
+                use: [
+                    {
+                        loader: 'html-loader',
+                    }
+                ]
+            },
         ]
     },
 
