@@ -1,0 +1,5 @@
+@use "./index" as i;
+
+body {
+    background-color: i.$background-color;
+}
