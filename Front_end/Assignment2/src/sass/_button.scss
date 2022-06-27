@@ -1,0 +1,13 @@
+@use "./variables" as var;
+
+.btn {
+    border: none;
+    background-color: var.$footer-color;
+    padding: .5rem 2rem;
+    border-radius: 3rem;
+    font-size: 1.25rem;
+
+    &__card {
+        border: 1px solid #fff;
+    }
+}

@@ -1,0 +1,7 @@
+@mixin p_text($size) {
+    padding: 1.5em;
+    font-size: $size;
+    line-height: 1.6;
+    // letter-spacing: 1px;
+}
+

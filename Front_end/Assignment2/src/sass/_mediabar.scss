@@ -1,0 +1,77 @@
+@use "./variables" as var;
+@use "./mixin";
+
+$social-media-colors: "blog" #e17b77 "\f5fc", "facebook" #3b5998 "\f39e",
+    "twitter" #00aced "\f099", "github" #333 "\f09b", "linkedin" #007bb6 "\f0e1";
+
+@each $name, $color, $icon in $social-media-colors {
+    .#{$name} {
+        background-color: $color;
+    }
+
+    .#{$name}:before {
+        content: $icon;
+        display: inline-block;
+        font-family: "Font Awesome 5 Brands", "Font Awesome 5 Free";
+        font-size: 1rem;
+        color: #fff;
+        position: relative;
+        top: 0px;
+        left: -12px;
+        background-color: $color;
+        padding: 0.5rem 1rem;
+        padding-right: 1.35rem;
+        text-rendering: auto;
+        cursor: pointer;
+    }
+
+    .#{$name}:hover {
+        transform: translateX(-275px);
+        transition: transform 300ms ease-in-out;
+    }
+}
+
+.socialbar {
+    display: flex;
+    width: 100%;
+    justify-content: baseline;
+    flex-direction: column;
+    position: sticky;
+    bottom: 100px;
+    transform: translateX(calc(100vw - 50px));
+
+    &__link {
+        display: none;
+        position: relative;
+        display: inline-block;
+        padding: 1rem;
+        font-size: 1.1rem;
+        text-decoration: none;
+        color: #fff;
+    }
+
+    &__link:before:hover {
+        transform: translateX(100px);
+    }
+}
+
+@media (min-width: 600px) {
+    @each $name, $color, $icon in $social-media-colors {
+        .#{$name} {
+            background-color: $color;
+        }
+
+        .#{$name}:before {
+            font-size: 2rem;
+        }
+    }
+
+    .socialbar {
+        transform: translateX(calc(100vw - 75px));
+
+        &__link {
+            font-size: 1.5rem;
+        }
+    }
+
+}
