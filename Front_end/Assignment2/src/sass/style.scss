@@ -1,7 +1,11 @@
-@use "./index" as i;
+@use "./index";
+$fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
+@import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "~@fortawesome/fontawesome-free/scss/solid.scss";
+@import "~@fortawesome/fontawesome-free/scss/brands.scss";
 
 * {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     padding: 0;
     margin: 0;
 }
@@ -11,9 +15,5 @@ html {
 }
 
 body {
-    display: grid;
-    grid-template-columns: 1fr minmax(300, 1200px) 1fr;
-    background-color: i.$background-color;
-    grid-template-areas: ". main .";
-    justify-content: center;
+    background-color: index.$background-color;
 }
