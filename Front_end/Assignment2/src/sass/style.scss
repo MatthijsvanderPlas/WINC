@@ -1,6 +1,7 @@
 @use "./index" as i;
 
 * {
+    font-family: 'Roboto', sans-serif;
     padding: 0;
     margin: 0;
 }
@@ -11,7 +12,8 @@ html {
 
 body {
     display: grid;
-    grid-template-columns: 1fr minmax(auto, 1200px) 1fr;
+    grid-template-columns: 1fr minmax(300, 1200px) 1fr;
     background-color: i.$background-color;
     grid-template-areas: ". main .";
+    justify-content: center;
 }
