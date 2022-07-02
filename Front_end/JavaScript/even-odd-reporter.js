@@ -3,9 +3,9 @@ for (let i = 0; i <= 20; i++) {
     // TODO: determine if i is odd or even
     // TODO: use console.log
     if (i % 2 === 0) {
-        console.log(`${i} is an even`)
+        console.log(`${i} is even`)
     } else {
-        console.log(`${i} is an odd`)
+        console.log(`${i} is odd`)
     }
   }
   
