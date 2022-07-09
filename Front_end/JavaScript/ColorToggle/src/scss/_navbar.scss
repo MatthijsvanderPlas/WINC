@@ -22,23 +22,22 @@
     }
 
     &__dropdown {
-
         position: relative;
 
-        &:hover  &-menu {
-            display: flex;
-        }
-
         &-menu {
-            display: none;
+            display: flex;
+            opacity: 0;
             position: absolute;
             top: 73px;
-            left: 0px;
+            left: -200px;
             width: fit-content;
+
         }
     }
 }
 
-.dropdown:hover .sidebar {
-    display: flex;
+.navbar__dropdown:hover .navbar__dropdown-menu {
+    opacity: 1;
+    transform: translateX(200px);
+    transition: all 500ms ease-in-out;
 }
