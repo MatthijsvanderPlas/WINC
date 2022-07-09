@@ -1,19 +1,20 @@
-import './src/scss/style.scss'
+import "./src/scss/style.scss";
 import "@fortawesome/fontawesome-free/css/all.css";
 
-const colorChange = function(e) {
-	document.body.style.backgroundColor = e.target.value;
-	document.querySelector('.card__span').textContent = ` ${e.target.value}`;
-	document.querySelector('.card__span').style.color = e.target.value;
-	if(e.target.value === 'White') {
+const colorChange = function(e, color = 0) {
+	if(color === 0) color = e.target.value;
+	document.body.style.backgroundColor = color;
+	document.querySelector('.card__span').textContent = ` ${color}`;
+	document.querySelector('.card__span').style.color = color;
+	if(color === 'White') {
 		document.querySelector('.card__span').style.color = 'black';
 	}
 	closeColorbar();
-}
+};
 
 const closeColorbar = function() {
 	colorbar.style.transform = '';
-}
+};
 
 const addRadioEvent = function() {
 	const radios = document.querySelectorAll('input[name="colortoggle"]');
@@ -21,15 +22,23 @@ const addRadioEvent = function() {
 
 	radios.forEach.call(radios, function(radio, i = 0) {
 	
-		lis[i].style.backgroundColor = radio.value;
+			lis[i].style.backgroundColor = radio.value;
 
-		radio.addEventListener('change', colorChange)
+			const keyStrokes = {1: 'White', 2: 'Red',3: 'Yellow', 4: 'Blue',5: 'Green',6: 'Orange'};
 
-		i++;
+			radio.addEventListener('change', colorChange);
+			window.addEventListener('keydown', (e) =>{
+				const pressedKey = Number(e.key);
+				for(let key of Object.keys(keyStrokes)) {
+					if(pressedKey === Number(key)) {
+						colorChange(e, keyStrokes[key]);
+					}
+				}
+			i++;
+		})
 	})
-}
+};
 
 const colorbar = document.querySelector('.colorbar');
 
-// addBarEvent();
 addRadioEvent();
