@@ -1,0 +1,14 @@
+.colorbar {
+    width: fit-content;
+    min-width: 200px;
+    
+    &__item {
+        list-style-type: none;
+        margin-right: 50px;
+        padding: 0.5rem;
+    }
+
+    &__radio {
+        margin-right: 1rem;
+    }
+}

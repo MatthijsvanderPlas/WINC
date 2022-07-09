@@ -1,0 +1,44 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color);
+    width: 100%;
+    height: 75px;
+
+    &__bars {
+        padding: 20px;
+        cursor: pointer;
+        margin-right: auto;
+        background: none;
+    }
+
+    &__title {
+        color: #fff;
+        font-size: 2rem;
+        margin: 0 auto;
+        text-align: center;
+        flex-basis: 100%;
+    }
+
+    &__dropdown {
+
+        position: relative;
+
+        &:hover  &-menu {
+            display: flex;
+        }
+
+        &-menu {
+            display: none;
+            position: absolute;
+            top: 73px;
+            left: 0px;
+            width: fit-content;
+        }
+    }
+}
+
+.dropdown:hover .sidebar {
+    display: flex;
+}

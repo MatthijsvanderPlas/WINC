@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+        <script defer type="module" src="/main.js"></script>
+        <title>Color Toggle</title>
+    </head>
+    <body>
+        <header class="header">
+            <nav class="navbar">
+                <div class="navbar__dropdown">
+                    <button class="fa fa-bars fa-2x navbar__bars"></button>
+                    <section class="navbar__dropdown-menu">
+                        <form>
+                            <ul class="colorbar">
+                                <li class="colorbar__item">
+                                    <input
+                                        class="colorbar__radio"
+                                        type="radio"
+                                        name="colortoggle"
+                                        value="White"
+                                    />Home
+                                </li>
+                                <li class="colorbar__item">
+                                    <input
+                                        class="colorbar__radio"
+                                        type="radio"
+                                        name="colortoggle"
+                                        value="Red"
+                                    />Red
+                                </li>
+                                <li class="colorbar__item">
+                                    <input
+                                        class="colorbar__radio"
+                                        type="radio"
+                                        name="colortoggle"
+                                        value="Yellow"
+                                    />Yellow
+                                </li>
+                                <li class="colorbar__item">
+                                    <input
+                                        class="colorbar__radio"
+                                        type="radio"
+                                        name="colortoggle"
+                                        value="Blue"
+                                    />Blue
+                                </li>
+                                <li class="colorbar__item">
+                                    <input
+                                        class="colorbar__radio"
+                                        type="radio"
+                                        name="colortoggle"
+                                        value="Green"
+                                    />Green
+                                </li>
+                                <li class="colorbar__item">
+                                    <input
+                                        class="colorbar__radio"
+                                        type="radio"
+                                        name="colortoggle"
+                                        value="Orange"
+                                    />Orange
+                                </li>
+                            </ul>
+                        </form>
+                    </section>
+                </div>
+                <h1 class="navbar__title">Color Toggle</h1>
+            </nav>
+        </header>
+        <main class="hero">
+            <div class="card">
+                <h2 class="card__title">Demonstrating Colors</h2>
+                <p class="card__text">
+                    Displaying different background colors through an
+                    interactive menu. Pick your favourite color and watch
+                    everything change.
+                </p>
+                <p class="card__color">
+                    Currently the color is:<span class="card__span">
+                        White</span
+                    >
+                </p>
+            </div>
+            <div class="card">
+                <h2 class="card__title">How it works?</h2>
+                <p class="card__text">
+                    Displaying different background colors through an
+                    interactive menu. Pick your favourite color and watch
+                    everything change.
+                </p>
+            </div>
+        </main>
+    </body>
+</html>

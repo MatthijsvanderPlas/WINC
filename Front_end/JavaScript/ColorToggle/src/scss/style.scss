@@ -1,0 +1,43 @@
+@use './index.scss';
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+
+    --primary-color: #fc7753;
+}
+
+body {
+    display: grid;
+    background-color: #fff;
+    grid-template-rows: 75px, 1fr;
+    grid-template-columns: minmax(10%, 250px);
+    grid-template-areas:
+        "header header"
+        "sidebar main";
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-family: "Roboto", sans-serif;
+}
+
+.header {
+    grid-area: header;
+}
+
+.hero {
+    grid-area: main;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
