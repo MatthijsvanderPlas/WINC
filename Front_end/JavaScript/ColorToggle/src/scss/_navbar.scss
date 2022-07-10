@@ -31,13 +31,13 @@
             top: 73px;
             left: -200px;
             width: fit-content;
-
+            transition: all 400ms ease-in-out;
         }
     }
 }
 
-.navbar__dropdown:hover .navbar__dropdown-menu {
+.dropdown__hover:hover .navbar__dropdown-menu {
     opacity: 1;
     transform: translateX(200px);
-    transition: all 500ms ease-in-out;
+    transition: all 400ms ease-in-out;
 }

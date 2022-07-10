@@ -15,10 +15,9 @@ body {
     display: grid;
     background-color: #fff;
     grid-template-rows: 75px, 1fr;
-    grid-template-columns: minmax(10%, 250px);
     grid-template-areas:
-        "header header"
-        "sidebar main";
+        "header"
+        "main";
 }
 
 h1,
