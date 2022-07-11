@@ -11,7 +11,7 @@ console.log(findSpiderMan(superheroes))
 // Find Spiderman
 // result should be: {name: "Spiderman", alter_ego: "Peter Parker"}
 
-const doubleArrayValues = array => array.map(item => item * 2);
+const doubleArrayValues = array => array.map(n => n + n);
 
 console.log(doubleArrayValues([1, 2, 3]))
 // result should be [2, 4, 6]
