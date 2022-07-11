@@ -8,10 +8,10 @@ const array = [
   ];
 
   for (let person of array) {
-    // console.log(person);
-    // console.log(`This is the name: ${person.name}`)
-    // console.log(`Date of birth: ${new Date().getFullYear() - person.age}`)
-    // console.log(`${person.name} is a ${person.profession}`)
+    console.log(person);
+    console.log(`This is the name: ${person.name}`)
+    console.log(`Date of birth: ${new Date().getFullYear() - person.age}`)
+    console.log(`${person.name} is a ${person.profession}`)
     if (person.age > 50) {
         console.log(`${person.name} is over 50 (${person.age})`)
     }
