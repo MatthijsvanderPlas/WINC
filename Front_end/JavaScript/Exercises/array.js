@@ -29,16 +29,23 @@ console.log(lastElementInArray(["Hare", "Guinea pig", "Chicken", "Turtle"]));
 const presidents = ["Trump", "Obama", "Bush", "Clinton"] 
 
 const impeachTrumpSlice = function(array) {
-    return array.slice(1)
+    //Slice makes a new array.
+    const newPresidents = array.slice(1)
+    console.log (`The new array: ${newPresidents}, and the original array: ${array}`)
+    return newPresidents
 }
 const impeachTrumpSplice = function(array) {
-    return array.splice(1, 3, '')
+    // Splice modifies the existing array
+    array.splice(0, 1)
+    return array
 }
 
 console.log(impeachTrumpSlice(presidents)); // ["Obama", "Bush", "Clinton"]
 console.log(impeachTrumpSplice(presidents)); // ["Obama", "Bush", "Clinton"]
 
 const stringsTogether = array => {
+    // return array.join(" ");
+
     return array.reduce((message, item) => {
         return message + item + ' '
     }, '')
